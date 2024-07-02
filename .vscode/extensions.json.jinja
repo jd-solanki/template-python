@@ -1,0 +1,26 @@
+{
+    "recommendations": [
+        "tamasfe.even-better-toml",
+        "charliermarsh.ruff",
+        "exodiusstudios.comment-anchors",
+        "editorconfig.editorconfig",
+        "almenon.arepl",
+        "ms-python.mypy-type-checker",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "dongido.sync-env",
+        "redhat.vscode-yaml",
+
+        {% if "django" in libs_used %}
+        // For Django Projects
+        "monosans.djlint",
+        "batisteo.vscode-django",
+        {% endif %}
+
+
+        {% if "django" in libs_used or "jinja" in libs_used %}
+        // For Django/Jinja templating
+        "samuelcolvin.jinjahtml",
+        {% endif %}
+    ]
+}

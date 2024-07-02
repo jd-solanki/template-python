@@ -1,0 +1,23 @@
+project_name:
+  type: str
+  help: What is your project name in camel_case?
+
+python_version:
+  type: str
+  default: 3.12.3
+  help: What Python version do you want to use?
+
+ruff_target_version:
+  type: str
+  default: py312
+  help: This should be the same as the Python version, but with format like `py312`.
+
+libs_used:
+  type: str
+  multiselect: true
+  choices: [alembic, django, jinja, fastapi, pydantic]
+
+mypy_plugins_to_use:
+  type: str
+  multiselect: true
+  choices: [sqlalchemy.ext.mypy.plugin, pydantic.mypy]
